@@ -26,12 +26,12 @@ The file you need to edit depends on which console you use.
 Just add the aliases here. You can chose the name you want, but I suggest the following.
 
 ```bash
-alias c="~/Scripts/git-lazy/lazy-commit.sh"
-alias p="~/Scripts/git-lazy/lazy-push.sh"
-alias pu="~/Scripts/git-lazy/lazy-pull.sh"
-alias f="~/Scripts/git-lazy/lazy-feature.sh"
-alias rl="~/Scripts/git-lazy/lazy-release.sh"
-alias hf="~/Scripts/git-lazy/lazy-hotfix.sh"
+alias c="~/Scripts/lazy-git/lazy-commit.sh"
+alias p="~/Scripts/lazy-git/lazy-push.sh"
+alias pu="~/Scripts/lazy-git/lazy-pull.sh"
+alias f="~/Scripts/lazy-git/lazy-feature.sh"
+alias rl="~/Scripts/lazy-git/lazy-release.sh"
+alias hf="~/Scripts/lazy-git/lazy-hotfix.sh"
 ```
 
 *Don't forget to replace that path with where you copied the files to*
