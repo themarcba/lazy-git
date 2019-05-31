@@ -9,54 +9,27 @@ If there is any problem with this repository, best is to let me know on Twitter 
 
 # Installation
 
-*This will probably only work on Mac and Linux.*
-
-1. Copy `lazy-*` files to a folder of your chosing (e.g. `~/Scripts/git-lazy`)
-2. Give it execution rights `chmod +x lazy*.sh`
-3. [Link aliases](#link-aliases) to the files for fast access (see below)
-
-## Link aliases
-
-The file you need to edit depends on which console you use.
-
-* In **Linux**, if you use bash, it will be `~/.bashrc`
-* In **Mac**, if you use the standard Terminal app, it will be `~.bash_profile`
-* If you use [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) (as you should 😉), it will be `~/.zshrc`
-
-Just add the aliases here. You can chose the name you want, but I suggest the following.
-
 ```bash
-alias c="~/Scripts/lazy-git/lazy-commit.sh"
-alias p="~/Scripts/lazy-git/lazy-push.sh"
-alias pu="~/Scripts/lazy-git/lazy-pull.sh"
-alias f="~/Scripts/lazy-git/lazy-feature.sh"
-alias rl="~/Scripts/lazy-git/lazy-release.sh"
-alias hf="~/Scripts/lazy-git/lazy-hotfix.sh"
+npm i -g lazy-git
 ```
 
-*Don't forget to replace that path with where you copied the files to*
-
-Then just **restart your console** (or open a new session) and you're ready to go.
-
 # Use
-
-**Important!** Replace the lazy-* command with [what you set up before](#link-aliases).
 
 ## Commit
 This is to make a "lazy" commit. It autmatically adds unstaged files and commits all changes. For extra lazy developers, this can be even called without a commmit message. It'll set one for you. This is not recommended though 😉
 
 ```bash
 # Commit with custom message:
-$ lazy-commit <commit-message>
+$ c <commit-message>
 
 # Commit with version bump message:
-$ lazy-commit v
+$ c v
 
 # Commit with 'Updated README' message:
-$ lazy-commit (rm | r)
+$ c (rm | r)
 
 # Commit with lazy pre-written message:
-$ lazy-commit
+$ c
 ```
 
 ## Push
@@ -64,13 +37,13 @@ This is to make a "lazy" push. There are shortcuts for the master and develop br
 
 ```bash
 # Push to master:
-$ lazy-push.sh (master | m)
+$ p (master | m)
 
 # Push to develop:
-$ lazy-push.sh (develop | d)
+$ p (develop | d)
 
 # Push to current branch:
-$ lazy-push.sh
+$ p
 ```
 
 ## Pull
@@ -78,13 +51,13 @@ $ lazy-push.sh
 
  ```bash
 # Pull from master:
-$ lazy-pull.sh (master | m)
+$ pu (master | m)
 
 # Pull from develop:
-$ lazy-pull.sh (develop | d)
+$ pu (develop | d)
 
 # Pull from current branch:
-$ lazy-pull.sh
+$ pu
 ```
 
 ## Feature
@@ -94,13 +67,13 @@ This is to manage the "git flow feature" commands:
 
  ```bash
 # Start a feature:
-$ lazy-feature.sh <feature name>
+$ f <feature name>
 
 # Finish a specific feature:
-$ lazy-feature.sh (finish | stop) <feature name>
+$ f (finish | stop) <feature name>
 
 # Finish the current feature:
-$ lazy-feature.sh (finish | stop)
+$ f (finish | stop)
 ```
 
 ## Release
@@ -110,13 +83,13 @@ This is to manage the "git flow release" commands:
 
  ```bash
 # Start a release:
-$ lazy-release.sh <version number>
+$ rl <version number>
 
 # Finish a specific release:
-$ lazy-release.sh (finish | stop) <version number>
+$ rl (finish | stop) <version number>
 
 # Finish the current release:
-$ lazy-release.sh (finish | stop)
+$ rl (finish | stop)
 ```
 
 ## Hotfix
@@ -126,11 +99,11 @@ This is to manage the "git flow hotfix" commands:
 
  ```bash
 # Start a hotfix:
-$ lazy-hotfix.sh <version number>
+$ hf <version number>
 
 # Finish a specific hotfix:
-$ lazy-hotfix.sh (finish | stop) <version number>
+$ hf (finish | stop) <version number>
 
 # Finish the current hotfix:
-$ lazy-hotfix.sh (finish | stop)
+$ hf (finish | stop)
 ```
