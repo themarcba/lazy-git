@@ -1,0 +1,30 @@
+{
+    "name": "lazy-git",
+    "version": "1.0.0",
+    "description": "A set of commands that make working with git and git-flow (even) faster, providing some short-hand commands",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/themarcba/lazy-git.git"
+    },
+    "keywords": [
+        "git",
+        "git-flow"
+    ],
+    "author": "Marc Backes",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/themarcba/lazy-git/issues"
+    },
+    "homepage": "https://github.com/themarcba/lazy-git#readme",
+    "dependencies": {
+        "current-git-branch": "^1.1.0",
+        "shelljs": "^0.8.3"
+    },
+    "bin": {
+        "c": "bin/lazy-commit.js"
+    }
+}
