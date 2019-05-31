@@ -1,6 +1,6 @@
 {
     "name": "@themarcba/lazy-git",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "description": "A set of commands that make working with git and git-flow (even) faster, providing some short-hand commands",
     "main": "index.js",
     "scripts": {
