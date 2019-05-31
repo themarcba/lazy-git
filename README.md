@@ -1,7 +1,5 @@
 # lazy-git
 
-🚨 The functionality of this repository is currently being rewritten as NPM package. Stay tuned. 🚨
-
 lazy-git is a set of commands that make working with **git** and **git-flow** (even) faster.
 
 **Attention!**
