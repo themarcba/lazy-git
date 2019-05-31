@@ -26,6 +26,11 @@
         "shelljs": "^0.8.3"
     },
     "bin": {
-        "c": "bin/lazy-commit.js"
+        "c": "bin/lazy-commit.js",
+        "p": "bin/lazy-push.js",
+        "pu": "bin/lazy-pull.js",
+        "f": "bin/lazy-feature.js",
+        "rl": "bin/lazy-release.js",
+        "hf": "bin/lazy-hotfix.js"
     }
 }
