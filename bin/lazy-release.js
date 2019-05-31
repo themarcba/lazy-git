@@ -24,8 +24,7 @@ if (['finish', 'stop'].includes(args[0])) {
     if (releaseVersion) {
         console.log(chalk.green(`Oh boy, the release ${releaseVersion} is ready?`));
         console.log(chalk.green(`Good luck with the deploy! (ﾉ◕ヮ◕)ﾉ*:・ﾟ✧`));
-        console.log(`git flow release finish ${releaseVersion}`);
-        // shell.exec(`git flow release finish ${releaseVersion}`);
+        shell.exec(`git flow release finish ${releaseVersion}`);
     } else {
         // When no release version has been provided
 
@@ -33,8 +32,7 @@ if (['finish', 'stop'].includes(args[0])) {
         if (currentBranch.category === 'release') {
             console.log(chalk.green(`Oh boy, the release ${currentBranch.name} is ready?`));
             console.log(chalk.green(`Good luck with the deploy! (ﾉ◕ヮ◕)ﾉ*:・ﾟ✧`));
-            console.log(`git flow release finish ${currentBranch.name}`);
-            // shell.exec(`git flow release finish ${currentBranch.name}`);
+            shell.exec(`git flow release finish ${currentBranch.name}`);
         } else {
             // If the current branch is not a release, it must be a mistake by the user
             console.log(chalk.red(`You're not in a release branch.`));
@@ -55,7 +53,6 @@ if (['finish', 'stop'].includes(args[0])) {
     } else {
         console.log(chalk.green(`Creating a new release, eh?`));
         console.log(chalk.green(`Don't forget to bump the version in your code to ${releaseVersion} •ᴗ•`));
-        console.log(`git flow release start "${releaseVersion}"`);        
-        // shell.exec(`git flow release start "${releaseVersion}"`);        
+        shell.exec(`git flow release start "${releaseVersion}"`);        
     }
 }
