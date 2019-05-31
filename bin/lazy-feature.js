@@ -23,23 +23,33 @@ if (['finish', 'stop'].includes(args[0])) {
     // When a feature name has been provided
     if (featureName) {
         console.log(chalk.green(`Your work is done in ${featureName}?`));
-        console.log(chalk.green(`Awesome! Let's get this badboy to develop (ﾉ◕ヮ◕)ﾉ*:・ﾟ✧`));;
+        console.log(chalk.green(`Awesome! Let's get this badboy to develop (ﾉ◕ヮ◕)ﾉ*:・ﾟ✧`));
         shell.exec(`git flow feature finish ${featureName}`);
     } else {
+        // When no feature name has been provided
+
+        // Check if the current branch is a feature. If yes, finish current branch.
         if (currentBranch.category === 'feature') {
             console.log(chalk.green(`Your work is done in ${currentBranch.name}?`));
-            console.log(chalk.green(`Awesome! Let's get this badboy to develop (ﾉ◕ヮ◕)ﾉ*:・ﾟ✧`));;
+            console.log(chalk.green(`Awesome! Let's get this badboy to develop (ﾉ◕ヮ◕)ﾉ*:・ﾟ✧`));
             shell.exec(`git flow feature finish ${currentBranch.name}`);
         } else {
+            // If the current branch is not a feature, it must be a mistake by the user
             console.log(chalk.red(`You're not in a feature branch.`));
             console.log(chalk.red(`You're in ${currentBranch.full} (☉_☉)`));
         }
     }
 } else {
+    // If the arguments passed are not stopping commands
+
     let featureName = args[0];
+
+    // If no feature name has been provided, it must be a mistake by the user
     if (!featureName) {
         console.log(chalk.red('You\'re trying to create a new feature.'));
         console.log(chalk.red('It would be awesome if you\'d provide a name for that (╯°□°）╯︵ ┻━┻'));
+
+    // If a feature name is provided, create it
     } else {
         console.log(chalk.green(`Creating a new feature, eh?`));
         console.log(chalk.green(`Have an awesome time working on ${featureName} •ᴗ•`));
