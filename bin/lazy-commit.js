@@ -30,7 +30,7 @@ if(commitMessage) {
         console.log(chalk.green('Committing your changes (⌐■_■)'));
         shell.exec('git commit -am "Updated README"');
     } else {
-        console.log(chalk.green(`Committing your changes (⌐■_■) => ${arguments.join(' ')}`));
+        console.log(chalk.green(`Committing your changes (⌐■_■)`));
         shell.exec(`git commit -am "${arguments.join(' ')}"`);
     }
 } else { // If no commit message has been entered, commit with pregenerated message
