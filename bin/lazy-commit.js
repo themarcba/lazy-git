@@ -10,9 +10,6 @@ let commitMessage = args[0];
 // Add unstaged files
 shell.exec('git add -A .');
 
-console.log(args);
-
-
 // If commit message was entered, commit with that message
 if(commitMessage) {
     // Shortcut for version bump
