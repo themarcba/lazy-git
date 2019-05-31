@@ -21,6 +21,7 @@
     },
     "homepage": "https://github.com/themarcba/lazy-git#readme",
     "dependencies": {
+        "chalk": "^2.4.2",
         "current-git-branch": "^1.1.0",
         "shelljs": "^0.8.3"
     },
