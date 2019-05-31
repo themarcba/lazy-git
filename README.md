@@ -10,7 +10,7 @@ If there is any problem with this repository, best is to let me know on Twitter 
 # Installation
 
 ```bash
-npm i -g lazy-git
+npm i -g @themarcba/lazy-git
 ```
 
 # Use
