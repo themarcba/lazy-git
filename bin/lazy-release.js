@@ -46,7 +46,7 @@ if (['finish', 'stop'].includes(args[0])) {
     // If no release version has been provided, it must be a mistake by the user
     if (!releaseVersion) {
         try {
-            const pjson = require('../package.json')
+            const pjson = require('./package.json')
             releaseVersion = pjson.version
             console.log(chalk.green(`Creating a new release with the version ${releaseVersion} •ᴗ•`))
             shell.exec(`git flow release start "${releaseVersion}"`)
